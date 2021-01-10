@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="miningModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Field">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FieldName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stocks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevMethod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AnnualProd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CostForUnit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MineralID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mineral" Relationship="Self.FK_Field_MineralID_Mineral_ID" FromRole="Field" ToRole="Mineral" />
+    <NavigationProperty Name="PickupPoint" Relationship="Self.FK_PickupPoint_FieldID_Field_ID" FromRole="Field" ToRole="PickupPoint" />
+  </EntityType>
+  <EntityType Name="Mineral">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MineralName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MinUnitID" Type="Int32" Nullable="false" />
+    <Property Name="AnnualOfYear" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PriceForUnit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TypeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Field" Relationship="Self.FK_Field_MineralID_Mineral_ID" FromRole="Mineral" ToRole="Field" />
+    <NavigationProperty Name="MineralUnit" Relationship="Self.FK_Mineral_MinUnitID_MineralUnit_ID" FromRole="Mineral" ToRole="MineralUnit" />
+    <NavigationProperty Name="MineralType" Relationship="Self.FK_Mineral_TypeID_MineralType_ID" FromRole="Mineral" ToRole="MineralType" />
+  </EntityType>
+  <EntityType Name="MineralType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Mineral" Relationship="Self.FK_Mineral_TypeID_MineralType_ID" FromRole="MineralType" ToRole="Mineral" />
+  </EntityType>
+  <EntityType Name="MineralUnit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Mineral" Relationship="Self.FK_Mineral_MinUnitID_MineralUnit_ID" FromRole="MineralUnit" ToRole="Mineral" />
+  </EntityType>
+  <EntityType Name="PickupPoint">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PointName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Capacity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FieldID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Field" Relationship="Self.FK_PickupPoint_FieldID_Field_ID" FromRole="PickupPoint" ToRole="Field" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="IDRole" />
+    </Key>
+    <Property Name="IDRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SignIn" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="Role" ToRole="SignIn" />
+  </EntityType>
+  <EntityType Name="SignIn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="SignIn" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Field_MineralID_Mineral_ID">
+    <End Role="Mineral" Type="Self.Mineral" Multiplicity="1" />
+    <End Role="Field" Type="Self.Field" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mineral">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Field">
+        <PropertyRef Name="MineralID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PickupPoint_FieldID_Field_ID">
+    <End Role="Field" Type="Self.Field" Multiplicity="1" />
+    <End Role="PickupPoint" Type="Self.PickupPoint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Field">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PickupPoint">
+        <PropertyRef Name="FieldID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mineral_MinUnitID_MineralUnit_ID">
+    <End Role="MineralUnit" Type="Self.MineralUnit" Multiplicity="1" />
+    <End Role="Mineral" Type="Self.Mineral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MineralUnit">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mineral">
+        <PropertyRef Name="MinUnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mineral_TypeID_MineralType_ID">
+    <End Role="MineralType" Type="Self.MineralType" Multiplicity="1" />
+    <End Role="Mineral" Type="Self.Mineral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MineralType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mineral">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignIn_RoleID_Role_IDRole">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="IDRole" />
+      </Principal>
+      <Dependent Role="SignIn">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="miningEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Field" EntityType="Self.Field" />
+    <EntitySet Name="Mineral" EntityType="Self.Mineral" />
+    <EntitySet Name="MineralType" EntityType="Self.MineralType" />
+    <EntitySet Name="MineralUnit" EntityType="Self.MineralUnit" />
+    <EntitySet Name="PickupPoint" EntityType="Self.PickupPoint" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="SignIn" EntityType="Self.SignIn" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Field_MineralID_Mineral_ID" Association="Self.FK_Field_MineralID_Mineral_ID">
+      <End Role="Mineral" EntitySet="Mineral" />
+      <End Role="Field" EntitySet="Field" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PickupPoint_FieldID_Field_ID" Association="Self.FK_PickupPoint_FieldID_Field_ID">
+      <End Role="Field" EntitySet="Field" />
+      <End Role="PickupPoint" EntitySet="PickupPoint" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mineral_MinUnitID_MineralUnit_ID" Association="Self.FK_Mineral_MinUnitID_MineralUnit_ID">
+      <End Role="MineralUnit" EntitySet="MineralUnit" />
+      <End Role="Mineral" EntitySet="Mineral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mineral_TypeID_MineralType_ID" Association="Self.FK_Mineral_TypeID_MineralType_ID">
+      <End Role="MineralType" EntitySet="MineralType" />
+      <End Role="Mineral" EntitySet="Mineral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignIn_RoleID_Role_IDRole" Association="Self.FK_SignIn_RoleID_Role_IDRole">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="SignIn" EntitySet="SignIn" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

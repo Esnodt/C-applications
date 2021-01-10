@@ -1,0 +1,91 @@
+﻿<Page x:Class="Mining_Application.View.Pages.Admin.adminDataViewPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Mining_Application.View.Pages.Admin"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="adminDataViewPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="10">
+                <Button x:Name="backBtn"
+                        Content="Назад"
+                        FontSize="15"
+                        Height="30"
+                        Width="120"
+                        Click="backBtn_Click"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <TextBlock Text="Поиск:"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Width="70"/>
+                <TextBox x:Name="searchTxb"
+                         FontFamily="15"
+                         Width="200" TextChanged="searchTxb_TextChanged"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <DataGrid x:Name="dataView" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Field.ID}" Width="0.3*"/>
+                    <DataGridTextColumn Header="Полезное ископаемое" Binding="{Binding Field.Mineral.MineralName}" Width="*"/>
+                    <DataGridTextColumn Header="Единица измерения" Binding="{Binding Field.Mineral.MineralUnit.Unit}" Width="*"/>
+                    <DataGridTextColumn Header="Годовая потребность" Binding="{Binding Field.Mineral.AnnualOfYear}" Width="*"/>
+                    <DataGridTextColumn Header="Цена за единицу" Binding="{Binding Field.Mineral.PriceForUnit}" Width="*"/>
+                    <DataGridTextColumn Header="Тип" Binding="{Binding Field.Mineral.MineralType.Type}" Width="0.5*"/>
+                    <DataGridTextColumn Header="Название месторождения" Binding="{Binding Field.FieldName}" Width="*"/>
+                    <DataGridTextColumn Header="Запасы" Binding="{Binding Field.Stocks}" Width="0.5*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <Button x:Name="addBtn"
+                        Content="Добавить"
+                        FontSize="15"
+                        Height="35"
+                        Width="120"
+                        Margin="0,0,20,0"
+                        Click="addBtn_Click"/>
+                <Button x:Name="editBtn"
+                        Content="Изменить"
+                        FontSize="15"
+                        Height="35"
+                        Width="120"
+                        Margin="0,0,20,0"
+                        Click="editBtn_Click"/>
+                <Button x:Name="deleteBtn"
+                        Content="Удалить"
+                        FontSize="15"
+                        Height="35"
+                        Width="120"
+                        Margin="0,0,20,0"
+                        Click="deleteBtn_Click"/>
+                <Button x:Name="infoBtn"
+                        Content="Подробнее"
+                        FontSize="15"
+                        Height="35"
+                        Width="120"
+                        Click="infoBtn_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
