@@ -15,6 +15,7 @@ D:\Preparation\WPF\Mining Application\Mining Application\bin\Debug\ru\EntityFram
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\adminDataViewPage.g.cs
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\addPage.g.cs
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\editPage.g.cs
+D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\infoPage.g.cs
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\autorizationPage.g.cs
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\User\userDataViewPage.g.cs
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Windows\MainWindow.g.cs
@@ -26,6 +27,7 @@ D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\App.baml
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\adminDataViewPage.baml
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\addPage.baml
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\editPage.baml
+D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\infoPage.baml
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\autorizationPage.baml
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Pages\User\userDataViewPage.baml
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\View\Windows\MainWindow.baml
@@ -36,3 +38,4 @@ D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Applic
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Application.csproj.CopyComplete
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Application.exe
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Application.pdb
+D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Application.csprojAssemblyReference.cache

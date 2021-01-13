@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="57edafd0aa5e4671b8f08fefe11103f5" Name="Diagram1">
+        <EntityTypeShape EntityType="CarShopModel.Car" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.CountryManufacture" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.Role" Width="1.5" PointX="5.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.SignIn" Width="1.5" PointX="8" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.Size" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.Specifications" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="CarShopModel.FK_Car_CountryID_CountryManufacture_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK_Car_SpecID_Specifications_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK_SignIn_RoleID_Role_IDRole" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK_Specifications_SizeID_Size_ID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

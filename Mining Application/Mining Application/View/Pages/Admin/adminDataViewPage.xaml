@@ -18,29 +18,52 @@
         <Grid Grid.Row="0">
             <StackPanel VerticalAlignment="Center"
                         HorizontalAlignment="Left"
-                        Margin="10">
+                        Orientation="Horizontal"
+                        Margin="20">
                 <Button x:Name="backBtn"
                         Content="Назад"
                         FontSize="15"
                         Height="30"
                         Width="120"
+                        Margin="0,0,20,0"
                         Click="backBtn_Click"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Поиск:"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Width="70"/>
+                    <TextBox x:Name="searchTxb"
+                             FontFamily="15"
+                             Width="200" TextChanged="searchTxb_TextChanged"/>
+                </StackPanel>
             </StackPanel>
             <StackPanel VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        Orientation="Horizontal">
-                <TextBlock Text="Поиск:"
-                           FontSize="18"
-                           FontWeight="SemiBold"
-                           Width="70"/>
-                <TextBox x:Name="searchTxb"
-                         FontFamily="15"
-                         Width="200" TextChanged="searchTxb_TextChanged"/>
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal"
+                        Margin="20">
+                <StackPanel VerticalAlignment="Center"
+                            Orientation="Horizontal"
+                            Margin="0,0,20,0">
+                    <TextBlock Text="Выборка по типу:"
+                               FontSize="13"
+                               Width="120"/>
+                    <ComboBox x:Name="selectTypeCmb"
+                              FontSize="12"
+                              Width="150" SelectionChanged="selectTypeCmb_SelectionChanged"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Выборка по месторождению:"
+                               FontSize="13"
+                               Width="190"/>
+                    <ComboBox x:Name="fieldCmb"
+                              FontSize="12"
+                              Width="150" SelectionChanged="fieldCmb_SelectionChanged"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Row="1">
-            <DataGrid x:Name="dataView" AutoGenerateColumns="False">
+            <DataGrid x:Name="dataView" AutoGenerateColumns="False" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Field.ID}" Width="0.3*"/>
                     <DataGridTextColumn Header="Полезное ископаемое" Binding="{Binding Field.Mineral.MineralName}" Width="*"/>
@@ -49,7 +72,6 @@
                     <DataGridTextColumn Header="Цена за единицу" Binding="{Binding Field.Mineral.PriceForUnit}" Width="*"/>
                     <DataGridTextColumn Header="Тип" Binding="{Binding Field.Mineral.MineralType.Type}" Width="0.5*"/>
                     <DataGridTextColumn Header="Название месторождения" Binding="{Binding Field.FieldName}" Width="*"/>
-                    <DataGridTextColumn Header="Запасы" Binding="{Binding Field.Stocks}" Width="0.5*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

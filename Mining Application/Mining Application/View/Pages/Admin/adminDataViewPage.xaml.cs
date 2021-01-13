@@ -26,6 +26,8 @@ namespace Mining_Application.View.Pages.Admin
         public adminDataViewPage()
         {
             InitializeComponent();
+            importDataForComboBox.LoadType(selectTypeCmb);
+            importDataForComboBox.LoadField(fieldCmb);
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -85,7 +87,22 @@ namespace Mining_Application.View.Pages.Admin
 
         private void infoBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                PickupPoint infoMineral = (PickupPoint)dataView.SelectedItem;
+                if(infoMineral != null)
+                {
+                    NavigationService.Navigate(new infoPage(infoMineral));
+                }
+                else
+                {
+                    throw new Exception("Выберите элемент!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.Source, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -97,6 +114,16 @@ namespace Mining_Application.View.Pages.Admin
         private void searchTxb_TextChanged(object sender, TextChangedEventArgs e)
         {
             dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.Mineral.MineralName.Contains(searchTxb.Text)).ToList();
+        }
+
+        private void selectTypeCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.Mineral.MineralType.Type == selectTypeCmb.SelectedItem.ToString()).ToList();
+        }
+
+        private void fieldCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.FieldName == fieldCmb.SelectedItem.ToString()).ToList();
         }
     }
 }

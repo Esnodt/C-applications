@@ -1,0 +1,57 @@
+﻿<Page x:Class="Mining_Application.View.Pages.Admin.Functions_for_data.infoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Mining_Application.View.Pages.Admin.Functions_for_data"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="infoPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <TextBlock Text="Поиск:"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Width="70"/>
+                <TextBox x:Name="searchTxb"
+                         FontSize="15"
+                         Width="200"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <DataGrid x:Name="infoDataView" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Field.ID}" Width="*"/>
+                    <DataGridTextColumn Header="Запасы" Binding="{Binding Field.Stocks}" Width="*"/>
+                    <DataGridTextColumn Header="Способ разработки" Binding="{Binding Field.DevMethod}" Width="*"/>
+                    <DataGridTextColumn Header="Годовая добыча" Binding="{Binding Field.AnnualProd}" Width="*"/>
+                    <DataGridTextColumn Header="Себестоимость за единицу" Binding="{Binding Field.CostForUnit}" Width="*"/>
+                    <DataGridTextColumn Header="Пункт вывоза" Binding="{Binding PointName}" Width="*"/>
+                    <DataGridTextColumn Header="Пропускная способность" Binding="{Binding Capacity}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <Button x:Name="backBtn"
+                        Content="Назад"
+                        FontSize="15"
+                        Height="35"
+                        Width="120" Click="backBtn_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,186 @@
+﻿<Page x:Class="Car_Shop.View.Pages.Admin.Functions_for_data.addPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Car_Shop.View.Pages.Admin.Functions_for_data"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="addPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <Image x:Name="imgLoad"
+                               Width="200"
+                               Height="200"
+                               Margin="0,0,30,0"/>
+                        <Button x:Name="imageBtn"
+                                Content="Загрузить"
+                                FontSize="15"
+                                Width="120"
+                                Height="30" Click="imageBtn_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Автомобиль:"
+                                   FontSize="15"
+                                   Width="180"/>
+                        <TextBox x:Name="carNameTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Модель:"
+                                   FontSize="15"
+                                   Width="180"/>
+                        <TextBox x:Name="carModelTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Класс:"
+                                   FontSize="15"
+                                   Width="180"/>
+                        <TextBox x:Name="carClassTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Кузов:"
+                                   FontSize="15"
+                                   Width="180"/>
+                        <TextBox x:Name="carBodyTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Год выпуска:"
+                                   FontSize="15"
+                                   Width="180"/>
+                        <DatePicker x:Name="yearOfProdTxb"
+                                    FontSize="15"
+                                    Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Цена:"
+                                   FontSize="15"
+                                   Width="180"/>
+                        <TextBox x:Name="priceTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Страна производителя:"
+                                    FontSize="15"
+                                    Width="180"/>
+                        <ComboBox x:Name="countryManTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Двигатель:" 
+                                   FontSize="15"
+                                   Width="180"/>
+                        <TextBox x:Name="engineTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock  Text="Привод:"
+                                    FontSize="15"
+                                    Width="180"/>
+                        <TextBox x:Name="driveUnitTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Топливо:"
+                                    FontSize="15"
+                                    Width="180"/>
+                        <TextBox x:Name="fuelTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Ширина:"
+                                    FontSize="15"
+                                    Width="180"/>
+                        <TextBox x:Name="widthTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock  Text="Длина:"
+                                    FontSize="15"
+                                    Width="180"/>
+                        <TextBox x:Name="lengthTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Высота:"
+                                    FontSize="15"
+                                    Width="180"/>
+                        <TextBox x:Name="heightTxb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <Button x:Name="backBtn"
+                        Content="Назад"
+                        FontSize="15"
+                        Width="120"
+                        Height="35"
+                        Margin="0,0,20,0"
+                        Click="backBtn_Click"/>
+                <Button x:Name="addBtn"
+                        Content="Добавить"
+                        FontSize="15"
+                        Width="120"
+                        Height="35"
+                        Click="addBtn_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -84,6 +84,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\Admin\Functions for data\infoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\autorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,6 +153,9 @@
     </Compile>
     <Compile Include="View\Pages\Admin\Functions for data\editPage.xaml.cs">
       <DependentUpon>editPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\Functions for data\infoPage.xaml.cs">
+      <DependentUpon>infoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\autorizationPage.xaml.cs">
       <DependentUpon>autorizationPage.xaml</DependentUpon>

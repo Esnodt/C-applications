@@ -1,0 +1,34 @@
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\autorizationPage.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Windows\MainWindow.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\App.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop_Content.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop_MarkupCompile.cache
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop_MarkupCompile.lref
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\bin\Debug\Car Shop.exe.config
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\bin\Debug\Car Shop.exe
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\bin\Debug\Car Shop.pdb
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\bin\Debug\EntityFramework.dll
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\bin\Debug\EntityFramework.SqlServer.dll
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\bin\Debug\EntityFramework.xml
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\bin\Debug\EntityFramework.SqlServer.xml
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\bin\Debug\ru\EntityFramework.resources.dll
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\Admin\adminDataViewPage.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\User\userDataViewPage.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\autorizationPage.baml
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Windows\MainWindow.baml
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\Admin\adminDataViewPage.baml
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\User\userDataViewPage.baml
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop.g.resources
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car_Shop.Properties.Resources.resources
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop.csproj.GenerateResource.cache
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop.csproj.CoreCompileInputs.cache
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop.csproj.CopyComplete
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop.exe
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop.pdb
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\Admin\Functions for data\addPage.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\Admin\Functions for data\editPage.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\Admin\Functions for data\addPage.baml
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\Admin\Functions for data\editPage.baml
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\Car Shop.csprojAssemblyReference.cache
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\Admin\Functions for data\infoPage.g.cs
+D:\Preparation\WPF\Car Shop\Car Shop\Car Shop\obj\Debug\View\Pages\Admin\Functions for data\infoPage.baml

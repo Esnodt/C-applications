@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarImg" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="CarName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CarBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YearOfProd" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="SpecID" Type="Int32" />
+    <NavigationProperty Name="CountryManufacture" Relationship="Self.FK_Car_CountryID_CountryManufacture_ID" FromRole="Car" ToRole="CountryManufacture" />
+    <NavigationProperty Name="Specifications" Relationship="Self.FK_Car_SpecID_Specifications_ID" FromRole="Car" ToRole="Specifications" />
+  </EntityType>
+  <EntityType Name="CountryManufacture">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Car" Relationship="Self.FK_Car_CountryID_CountryManufacture_ID" FromRole="CountryManufacture" ToRole="Car" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="IDRole" />
+    </Key>
+    <Property Name="IDRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SignIn" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="Role" ToRole="SignIn" />
+  </EntityType>
+  <EntityType Name="SignIn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="SignIn" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Width" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Length" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Height" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Specifications" Relationship="Self.FK_Specifications_SizeID_Size_ID" FromRole="Size" ToRole="Specifications" />
+  </EntityType>
+  <EntityType Name="Specifications">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Engine" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DriveUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fuel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SizeID" Type="Int32" />
+    <NavigationProperty Name="Car" Relationship="Self.FK_Car_SpecID_Specifications_ID" FromRole="Specifications" ToRole="Car" />
+    <NavigationProperty Name="Size" Relationship="Self.FK_Specifications_SizeID_Size_ID" FromRole="Specifications" ToRole="Size" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Car_CountryID_CountryManufacture_ID">
+    <End Role="CountryManufacture" Type="Self.CountryManufacture" Multiplicity="1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryManufacture">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Car_SpecID_Specifications_ID">
+    <End Role="Specifications" Type="Self.Specifications" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specifications">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="SpecID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignIn_RoleID_Role_IDRole">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="IDRole" />
+      </Principal>
+      <Dependent Role="SignIn">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Specifications_SizeID_Size_ID">
+    <End Role="Size" Type="Self.Size" Multiplicity="0..1" />
+    <End Role="Specifications" Type="Self.Specifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Size">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Specifications">
+        <PropertyRef Name="SizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CarShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Car" EntityType="Self.Car" />
+    <EntitySet Name="CountryManufacture" EntityType="Self.CountryManufacture" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="SignIn" EntityType="Self.SignIn" />
+    <EntitySet Name="Size" EntityType="Self.Size" />
+    <EntitySet Name="Specifications" EntityType="Self.Specifications" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Car_CountryID_CountryManufacture_ID" Association="Self.FK_Car_CountryID_CountryManufacture_ID">
+      <End Role="CountryManufacture" EntitySet="CountryManufacture" />
+      <End Role="Car" EntitySet="Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Car_SpecID_Specifications_ID" Association="Self.FK_Car_SpecID_Specifications_ID">
+      <End Role="Specifications" EntitySet="Specifications" />
+      <End Role="Car" EntitySet="Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignIn_RoleID_Role_IDRole" Association="Self.FK_SignIn_RoleID_Role_IDRole">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="SignIn" EntitySet="SignIn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Specifications_SizeID_Size_ID" Association="Self.FK_Specifications_SizeID_Size_ID">
+      <End Role="Size" EntitySet="Size" />
+      <End Role="Specifications" EntitySet="Specifications" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

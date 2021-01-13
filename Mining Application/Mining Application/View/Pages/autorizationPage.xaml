@@ -18,6 +18,7 @@
                            FontSize="15"
                            Width="150"/>
                 <TextBox x:Name="userNameTxb"
+                         Text="Sali"
                          FontSize="15"
                          Width="200"/>
             </StackPanel>
@@ -28,6 +29,7 @@
                            Width="150"/>
                 <PasswordBox x:Name="passwordTxb"
                             FontSize="15"
+                             Password="1004"
                             Width="200"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center"

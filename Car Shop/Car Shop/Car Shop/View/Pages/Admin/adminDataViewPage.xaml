@@ -1,0 +1,101 @@
+﻿<Page x:Class="Car_Shop.View.Pages.Admin.adminDataViewPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Car_Shop.View.Pages.Admin"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="adminDataViewPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="10">
+                <Button x:Name="backBtn"
+                        Content="Назад"
+                        FontSize="15"
+                        Width="120"
+                        Height="30"
+                        Click="backBtn_Click"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <TextBlock Text="Поиск:"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Width="80"/>
+                <TextBox x:Name="searchTxb"
+                         FontSize="18"
+                         Width="200"/>
+            </StackPanel>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <DataGrid x:Name="dataaView" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="0.5*"/>
+                        <DataGridTextColumn Header="Машина" Binding="{Binding CarName}" Width="*"/>
+                        <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="*"/>
+                        <DataGridTextColumn Header="Класс" Binding="{Binding Class}" Width="*"/>
+                        <DataGridTextColumn Header="Кузов" Binding="{Binding CarBody}" Width="*"/>
+                        <DataGridTextColumn Header="Год выпуска" Binding="{Binding YearOfProd, StringFormat={}{00:dd MMMM yyy}}" Width="*"/>
+                        <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="0.5*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Vertical">
+                    <Button x:Name="addBtn"
+                            Content="Добавить"
+                            FontSize="15"
+                            Width="130"
+                            Height="35"
+                            Margin="0,0,0,20" Click="addBtn_Click"/>
+                    <Button x:Name="deletVBtn"
+                            Content="Удалить"
+                            FontSize="15"
+                            Width="130"
+                            Height="35"
+                            Margin="0,0,0,20" Click="deletVBtn_Click"/>
+                    <Button x:Name="editBtn"
+                            Content="Изменить"
+                            FontSize="15"
+                            Width="130"
+                            Height="35"
+                            Margin="0,0,0,20" Click="editBtn_Click"/>
+                    <Button x:Name="infoBtn"
+                            Content="Подробнее"
+                            FontSize="15"
+                            Width="130"
+                            Height="35"
+                            Margin="0,0,0,20" Click="infoBtn_Click"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        
+        <Grid Grid.Row="2">
+            <StackPanel>
+                
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

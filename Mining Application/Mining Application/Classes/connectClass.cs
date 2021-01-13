@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Mining_Application.Classes
 {
-    class connectClass
+    public static class connectClass
     {
         public static miningEntities db = new miningEntities();
     }
