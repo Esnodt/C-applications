@@ -107,43 +107,43 @@
     <Compile Include="Classes\connectClass.cs" />
     <Compile Include="Classes\importDataForComboBox.cs" />
     <Compile Include="DB\Field.cs">
-      <DependentUpon>miningDB.tt</DependentUpon>
+      <DependentUpon>firstDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\firstDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>firstDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\firstDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>firstDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\firstDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>firstDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Mineral.cs">
-      <DependentUpon>miningDB.tt</DependentUpon>
+      <DependentUpon>firstDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\MineralType.cs">
-      <DependentUpon>miningDB.tt</DependentUpon>
+      <DependentUpon>firstDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\MineralUnit.cs">
-      <DependentUpon>miningDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\miningDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>miningDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\miningDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>miningDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\miningDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>miningDB.edmx</DependentUpon>
+      <DependentUpon>firstDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\PickupPoint.cs">
-      <DependentUpon>miningDB.tt</DependentUpon>
+      <DependentUpon>firstDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Role.cs">
-      <DependentUpon>miningDB.tt</DependentUpon>
+      <DependentUpon>firstDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\SignIn.cs">
-      <DependentUpon>miningDB.tt</DependentUpon>
+      <DependentUpon>firstDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
-      <DependentUpon>miningDB.tt</DependentUpon>
+      <DependentUpon>firstDB.tt</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\Admin\adminDataViewPage.xaml.cs">
       <DependentUpon>adminDataViewPage.xaml</DependentUpon>
@@ -186,12 +186,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DB\miningDB.edmx">
+    <EntityDeploy Include="DB\firstDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>miningDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>firstDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB\miningDB.edmx.diagram">
-      <DependentUpon>miningDB.edmx</DependentUpon>
+    <None Include="DB\firstDB.edmx.diagram">
+      <DependentUpon>firstDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -203,21 +203,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\miningDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>miningDB.Context.cs</LastGenOutput>
-      <DependentUpon>miningDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="DB\miningDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>miningDB.edmx</DependentUpon>
-      <LastGenOutput>miningDB.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DB\firstDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>firstDB.edmx</DependentUpon>
+      <LastGenOutput>firstDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\firstDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>firstDB.edmx</DependentUpon>
+      <LastGenOutput>firstDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

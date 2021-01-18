@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\
 Mining_Application
 none
 false
 DEBUG;TRACE
-D:\Preparation\WPF\Mining Application\Mining Application\App.xaml
+D:\Preparation\C-applications\Mining Application\Mining Application\App.xaml
 7-1900220418
-2-1309205494
-251077832710
-201481614776
+2-1751195371
+25707725458
+201166514519
 View\Pages\Admin\adminDataViewPage.xaml;View\Pages\Admin\Functions for data\addPage.xaml;View\Pages\Admin\Functions for data\editPage.xaml;View\Pages\Admin\Functions for data\infoPage.xaml;View\Pages\autorizationPage.xaml;View\Pages\User\userDataViewPage.xaml;View\Windows\MainWindow.xaml;
 
-True
+False
 

@@ -47,14 +47,14 @@ namespace Mining_Application.View.Pages.Admin.Functions_for_data
 
             newMineral.MineralName = mineralNameTxb.Text;
             newMineral.MinUnitID = newMinUnit.ID;
-            newMineral.AnnualOfYear = annualOfYearTxb.Text;
+            newMineral.AnnualOfYear = Convert.ToInt32(annualOfYearTxb.Text);
             newMineral.PriceForUnit = priceForUnitTxb.Text;
             newMineral.TypeID = newMinType.ID;
 
             newField.FieldName = fieldNameTxb.Text;
             newField.Stocks = stocksTxb.Text;
             newField.DevMethod = devMethodTxb.Text;
-            newField.AnnualProd = annualProdTxb.Text;
+            newField.AnnualProd = Convert.ToInt32(annualProdTxb.Text);
             newField.CostForUnit = costForUnitTxb.Text;
             newField.MineralID = newMineral.ID;
 
@@ -71,9 +71,7 @@ namespace Mining_Application.View.Pages.Admin.Functions_for_data
 
             connectClass.db.SaveChanges();
             MessageBox.Show("Данные успешно внесены!");
-
-            NavigationService.GoBack();
-            
+           
         }
     }
 }

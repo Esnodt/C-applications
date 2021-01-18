@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.3*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="0.2*"/>
         </Grid.RowDefinitions>
@@ -39,25 +39,35 @@
             </StackPanel>
             <StackPanel VerticalAlignment="Center"
                         HorizontalAlignment="Right"
-                        Orientation="Horizontal"
+                        Orientation="Vertical"
                         Margin="20">
-                <StackPanel VerticalAlignment="Center"
-                            Orientation="Horizontal"
-                            Margin="0,0,20,0">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,10">
                     <TextBlock Text="Выборка по типу:"
                                FontSize="13"
-                               Width="120"/>
-                    <ComboBox x:Name="selectTypeCmb"
-                              FontSize="12"
-                              Width="150" SelectionChanged="selectTypeCmb_SelectionChanged"/>
+                               Width="190"/>
+                    <CheckBox Content="Твердое топливо"
+                              x:Name="typeCheck"
+                              Checked="typeCheck_Checked"
+                              Unchecked="typeCheck_Unchecked"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,10">
                     <TextBlock Text="Выборка по месторождению:"
                                FontSize="13"
                                Width="190"/>
-                    <ComboBox x:Name="fieldCmb"
-                              FontSize="12"
-                              Width="150" SelectionChanged="fieldCmb_SelectionChanged"/>
+                    <CheckBox Content="Эльдорадо"
+                              x:Name="fieldCheck"
+                              Checked="fieldCheck_Checked"
+                              Unchecked="fieldCheck_Unchecked"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Непотребяемые ископаемые:"
+                               FontSize="13"
+                               Width="190"/>
+                    <CheckBox x:Name="dontCheck"
+                              Checked="dontCheck_Checked"
+                              Unchecked='dontCheck_Unchecked'/>
                 </StackPanel>
             </StackPanel>
         </Grid>

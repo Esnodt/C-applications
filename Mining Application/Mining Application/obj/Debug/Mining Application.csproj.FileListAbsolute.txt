@@ -39,3 +39,43 @@ D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Applic
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Application.exe
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Application.pdb
 D:\Preparation\WPF\Mining Application\Mining Application\obj\Debug\Mining Application.csprojAssemblyReference.cache
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\adminDataViewPage.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\addPage.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\editPage.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\infoPage.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\autorizationPage.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\User\userDataViewPage.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Windows\MainWindow.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\App.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application_Content.g.cs
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application_MarkupCompile.cache
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application_MarkupCompile.lref
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\Mining Application.exe.config
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\Mining Application.exe
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\Mining Application.pdb
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\EntityFramework.dll
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\EntityFramework.SqlServer.dll
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\MaterialDesignColors.dll
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\EntityFramework.xml
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\EntityFramework.SqlServer.xml
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\MaterialDesignColors.pdb
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\ru\EntityFramework.resources.dll
+D:\Preparation\C-applications\Mining Application\Mining Application\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\App.baml
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\adminDataViewPage.baml
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\addPage.baml
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\editPage.baml
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\Admin\Functions for data\infoPage.baml
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\autorizationPage.baml
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Pages\User\userDataViewPage.baml
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\View\Windows\MainWindow.baml
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.g.resources
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining_Application.Properties.Resources.resources
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.csproj.GenerateResource.cache
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.csproj.CoreCompileInputs.cache
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.csproj.CopyComplete
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.exe
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.pdb

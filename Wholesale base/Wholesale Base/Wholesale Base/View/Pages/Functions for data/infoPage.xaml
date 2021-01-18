@@ -1,0 +1,46 @@
+﻿<Page x:Class="Wholesale_Base.View.Pages.Functions_for_data.infoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Wholesale_Base.View.Pages.Functions_for_data"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="1300"
+      Title="infoPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="20">
+                <Button x:Name="backBtn"
+                        Content="Назад"
+                        FontSize="15"
+                        Width="120"
+                        Height="35"
+                        Click="backBtn_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <DataGrid x:Name="infoDataView" AutoGenerateColumns="false" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="0.3*"/>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}" Width="*"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="*"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="*"/>
+                    <DataGridTextColumn Header="Номер" Binding="{Binding Phone}" Width="*"/>
+                    <DataGridTextColumn Header="Адрес" Binding="{Binding Address}" Width="*"/>
+                    <DataGridTextColumn Header="Срок поставки" Binding="{Binding DeliveryTime}" Width="*"/>
+                    <DataGridTextColumn Header="Количество товаров" Binding="{Binding NumberOfGoods}" Width="*"/>
+                    <DataGridTextColumn Header="Номер счета" Binding="{Binding AccountNumber}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Page>

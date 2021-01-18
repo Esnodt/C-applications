@@ -1,0 +1,29 @@
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Pages\dataViewPage.g.cs
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Pages\Functions for data\addPage.g.cs
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Pages\Functions for data\editPage.g.cs
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Pages\Functions for data\infoPage.g.cs
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Windows\MainWindow.g.cs
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\App.g.cs
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base_Content.g.cs
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base_MarkupCompile.cache
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base_MarkupCompile.lref
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\bin\Debug\Wholesale Base.exe.config
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\bin\Debug\Wholesale Base.exe
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\bin\Debug\Wholesale Base.pdb
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\bin\Debug\EntityFramework.dll
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\bin\Debug\EntityFramework.SqlServer.dll
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\bin\Debug\EntityFramework.xml
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\bin\Debug\EntityFramework.SqlServer.xml
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\bin\Debug\ru\EntityFramework.resources.dll
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Pages\dataViewPage.baml
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Pages\Functions for data\addPage.baml
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Pages\Functions for data\editPage.baml
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Pages\Functions for data\infoPage.baml
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\View\Windows\MainWindow.baml
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.g.resources
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale_Base.Properties.Resources.resources
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.csproj.GenerateResource.cache
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.csproj.CoreCompileInputs.cache
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.csproj.CopyComplete
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.exe
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.pdb

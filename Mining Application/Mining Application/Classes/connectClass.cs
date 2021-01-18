@@ -9,6 +9,6 @@ namespace Mining_Application.Classes
 {
     public static class connectClass
     {
-        public static miningEntities db = new miningEntities();
+        public static miningEntities1 db = new miningEntities1();
     }
 }

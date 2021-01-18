@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище miningModelContainer" CdmEntityContainer="miningEntities1">
+    <EntitySetMapping Name="Field">
+      <EntityTypeMapping TypeName="miningModel.Field">
+        <MappingFragment StoreEntitySet="Field">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="Stocks" ColumnName="Stocks" />
+          <ScalarProperty Name="DevMethod" ColumnName="DevMethod" />
+          <ScalarProperty Name="AnnualProd" ColumnName="AnnualProd" />
+          <ScalarProperty Name="CostForUnit" ColumnName="CostForUnit" />
+          <ScalarProperty Name="MineralID" ColumnName="MineralID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mineral">
+      <EntityTypeMapping TypeName="miningModel.Mineral">
+        <MappingFragment StoreEntitySet="Mineral">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MineralName" ColumnName="MineralName" />
+          <ScalarProperty Name="MinUnitID" ColumnName="MinUnitID" />
+          <ScalarProperty Name="AnnualOfYear" ColumnName="AnnualOfYear" />
+          <ScalarProperty Name="PriceForUnit" ColumnName="PriceForUnit" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MineralType">
+      <EntityTypeMapping TypeName="miningModel.MineralType">
+        <MappingFragment StoreEntitySet="MineralType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MineralUnit">
+      <EntityTypeMapping TypeName="miningModel.MineralUnit">
+        <MappingFragment StoreEntitySet="MineralUnit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PickupPoint">
+      <EntityTypeMapping TypeName="miningModel.PickupPoint">
+        <MappingFragment StoreEntitySet="PickupPoint">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PointName" ColumnName="PointName" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="FieldID" ColumnName="FieldID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="miningModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="IDRole" ColumnName="IDRole" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SignIn">
+      <EntityTypeMapping TypeName="miningModel.SignIn">
+        <MappingFragment StoreEntitySet="SignIn">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="miningModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

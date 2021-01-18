@@ -24,7 +24,7 @@ namespace Mining_Application.DB
         public string FieldName { get; set; }
         public string Stocks { get; set; }
         public string DevMethod { get; set; }
-        public string AnnualProd { get; set; }
+        public int AnnualProd { get; set; }
         public string CostForUnit { get; set; }
         public int MineralID { get; set; }
     

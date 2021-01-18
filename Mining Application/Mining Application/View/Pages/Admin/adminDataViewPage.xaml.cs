@@ -26,8 +26,6 @@ namespace Mining_Application.View.Pages.Admin
         public adminDataViewPage()
         {
             InitializeComponent();
-            importDataForComboBox.LoadType(selectTypeCmb);
-            importDataForComboBox.LoadField(fieldCmb);
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -116,14 +114,34 @@ namespace Mining_Application.View.Pages.Admin
             dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.Mineral.MineralName.Contains(searchTxb.Text)).ToList();
         }
 
-        private void selectTypeCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void typeCheck_Checked(object sender, RoutedEventArgs e)
         {
-            dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.Mineral.MineralType.Type == selectTypeCmb.SelectedItem.ToString()).ToList();
+            dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.Mineral.MineralType.Type == "Твердоре топливо").ToList();
         }
 
-        private void fieldCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void typeCheck_Unchecked(object sender, RoutedEventArgs e)
         {
-            dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.FieldName == fieldCmb.SelectedItem.ToString()).ToList();
+            dataView.ItemsSource = connectClass.db.PickupPoint.ToList();
+        }
+
+        private void fieldCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.FieldName == "Эльдорадо").ToList();
+        }
+
+        private void fieldCheck_Unchecked(object sender, RoutedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.PickupPoint.ToList();
+        }
+
+        private void dontCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.PickupPoint.Where(item => item.Field.AnnualProd > 1000).ToList();
+        }
+
+        private void dontCheck_Unchecked(object sender, RoutedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.PickupPoint.ToList();
         }
     }
 }

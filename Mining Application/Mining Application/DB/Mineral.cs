@@ -23,7 +23,7 @@ namespace Mining_Application.DB
         public int ID { get; set; }
         public string MineralName { get; set; }
         public int MinUnitID { get; set; }
-        public string AnnualOfYear { get; set; }
+        public int AnnualOfYear { get; set; }
         public string PriceForUnit { get; set; }
         public int TypeID { get; set; }
     
