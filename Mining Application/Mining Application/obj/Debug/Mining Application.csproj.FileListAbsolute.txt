@@ -79,3 +79,4 @@ D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mi
 D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.csproj.CopyComplete
 D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.exe
 D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.pdb
+D:\Preparation\C-applications\Mining Application\Mining Application\obj\Debug\Mining Application.csprojAssemblyReference.cache

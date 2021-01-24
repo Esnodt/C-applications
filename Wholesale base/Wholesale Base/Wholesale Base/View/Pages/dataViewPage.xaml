@@ -36,6 +36,48 @@
                          FontSize="18"
                          Width="250" TextChanged="searchTxb_TextChanged"/>
             </StackPanel>
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="20"
+                        Orientation="Horizontal">
+                <StackPanel Orientation="Vertical"
+                            Margin="0,0,20,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Выборка по поставщику:"
+                                   FontSize="13"
+                                   Width="160"/>
+                        <CheckBox x:Name="postCheck"
+                                  Checked="postCheck_Checked"
+                                  Unchecked="postCheck_Unchecked"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Выборка по товару:"
+                                   FontSize="13"
+                                   Width="160"/>
+                        <CheckBox x:Name="productCheck"
+                                  Checked="productCheck_Checked"
+                                  Unchecked="productCheck_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Выборка по цене:"
+                                   FontSize="13"
+                                   Width="120"/>
+                        <CheckBox x:Name="priceCheck"
+                                  Checked="priceCheck_Checked"
+                                  Unchecked="priceCheck_Unchecked"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Выборка по годам:"
+                                   FontSize="13"
+                                   Width="120"/>
+                        <CheckBox x:Name="yearCheck"
+                                  Checked="yearCheck_Checked"
+                                  Unchecked="yearCheck_Unchecked"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
         </Grid>
 
         <Grid Grid.Row="1">

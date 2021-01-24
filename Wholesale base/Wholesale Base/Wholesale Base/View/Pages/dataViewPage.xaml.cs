@@ -112,5 +112,45 @@ namespace Wholesale_Base.View.Pages
         {
             dataView.ItemsSource = connectClass.db.Provider.Where(item => item.Product.ProducrName.Contains(searchTxb.Text)).ToList();
         }
+
+        private void postCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.Provider.Where(item => item.Product.ProducrName == item.Product.ProducrName).ToList();
+        }
+
+        private void postCheck_Unchecked(object sender, RoutedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.Provider.ToList();
+        }
+
+        private void productCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.Provider.Where(item => item.Product.ProducrName == "Коврик для мыши").ToList();
+        }
+
+        private void productCheck_Unchecked(object sender, RoutedEventArgs e)
+        {
+            dataView.ItemsSource = connectClass.db.Provider.ToList();
+        }
+
+        private void priceCheck_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void priceCheck_Unchecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void yearCheck_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void yearCheck_Unchecked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

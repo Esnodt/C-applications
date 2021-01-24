@@ -1,0 +1,207 @@
+﻿<Page x:Class="Airport_application.VIew.Pages.Admin.Functions_for_a_data.editPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Airport_application.VIew.Pages.Admin.Functions_for_a_data"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="editPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid>
+        <Image Source="/View/img/allBg.jpg" Stretch="Fill"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center" 
+                                Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Номер маршрута:"
+                                        FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="routeNumberTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Пункт вылета:"
+                                       FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="deepPointTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Пункт назначения:"
+                                       FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="arrPointTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Дата и время вылета:"
+                                       FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <DatePicker x:Name="depDateTimeTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Дата и время прибытия:"
+                                       FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <DatePicker x:Name="arrDateTimeTxb"
+                                        FontSize="16"
+                                        Width="250"
+                                        BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Расстояние:"
+                                        FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="distanceTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center" 
+                                Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Номер самолета:"
+                                        FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="planeNumberTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Тип:"
+                                        FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="typeTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Число мест:"
+                                       FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="numberOfPlaceTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Скорость:"
+                                       FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="planeSpeedTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Свободные места:"
+                                       FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox x:Name="passNumberTxb"
+                                     FontSize="16"
+                                     Width="250"
+                                     BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Колиество проданных билетов:"
+                                       FontSize="16"
+                                       Width="270"
+                                       Foreground="White"/>
+                            <TextBox    x:Name="ticketsTxb"
+                                        FontSize="16"
+                                         Width="250"
+                                         BorderBrush="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button x:Name="backBtn"
+                            Content="Назад"
+                            FontSize="16"
+                            Width="120"
+                            Height="35"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Margin="0,0,20,0"
+                            Click="backBtn_Click"/>
+                    <Button x:Name="editBtn"
+                            Content="Изменить"
+                            FontSize="16"
+                            Width="120"
+                            Height="35"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Click="editBtn_Click"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

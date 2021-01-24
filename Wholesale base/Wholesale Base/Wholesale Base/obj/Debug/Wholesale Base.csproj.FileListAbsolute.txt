@@ -27,3 +27,4 @@ D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\D
 D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.csproj.CopyComplete
 D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.exe
 D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.pdb
+D:\Preparation\C-applications\Wholesale base\Wholesale Base\Wholesale Base\obj\Debug\Wholesale Base.csprojAssemblyReference.cache

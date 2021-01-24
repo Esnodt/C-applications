@@ -1,0 +1,101 @@
+﻿<Page x:Class="Airport_application.VIew.Pages.Admin.adminMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Airport_application.VIew.Pages.Admin"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="adminMainPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignBackground}"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+
+    <Grid>
+        <Image Source="/View/img/allBg.jpg" Stretch="Fill"/>
+       <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.25*"/>
+            </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Orientation="Horizontal"
+                                Margin="20">
+                        <TextBlock Text="Поиск:"
+                                   FontSize="18"
+                                   FontWeight="SemiBold"
+                                   Width="70"
+                                   Foreground="White"/>
+                        <TextBox x:Name="searchTxb"
+                                 FontSize="16"
+                                 Width="300"
+                                 Foreground="White"
+                                 BorderBrush="White" TextChanged="searchTxb_TextChanged"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <DataGrid x:Name="datavIew" AutoGenerateColumns="False" IsReadOnly="True" Background="White" BorderBrush="Black">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="0.2*" Foreground="White"/>
+                            <DataGridTextColumn Header="Номер маршрута" Binding="{Binding RouteNumber}" Width="*"/>
+                            <DataGridTextColumn Header="Пункт вылета" Binding="{Binding DepPoint}" Width="*"/>
+                            <DataGridTextColumn Header="Пункт прибытия" Binding="{Binding ArrPoint}" Width="*"/>
+                            <DataGridTextColumn Header="Дистанция" Binding="{Binding Distance}" Width="*"/>
+                            <DataGridTextColumn Header="Дата и время вылета" Binding="{Binding PlaneParameters.DepDateTime}" Width="*"/>
+                            <DataGridTextColumn Header="Дата и время прибытия" Binding="{Binding PlanePatameters.ArrDateTime}" Width="*"/>
+                            <DataGridTextColumn Header="Количество проданных билетов" Binding="{Binding PlaneParameters.Tickets}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Orientation="Horizontal">
+                        <Button x:Name="addBtn"
+                                Content="Добавить"
+                                Background="Black"
+                                BorderBrush="Black"
+                                Foreground="White"
+                                Width="120"
+                                Height="35"
+                                Margin="0,0,20,0" Click="addBtn_Click"/>
+                        <Button x:Name="editBtn"
+                                Content="Изменить"
+                                 Background="Black"
+                                BorderBrush="Black"
+                                Foreground="White"
+                                Width="120"
+                                Height="35"
+                                Margin="0,0,20,0" Click="editBtn_Click"/>
+                        <Button x:Name="deleteBtn"
+                                Content="Удалить"
+                                 Background="Black"
+                                BorderBrush="Black"
+                                Foreground="White"
+                                Width="120"
+                                Height="35"
+                                Margin="0,0,20,0" Click="deleteBtn_Click"/>
+                        <Button x:Name="infoBtn"
+                                Content="Подробнее"
+                                 Background="Black"
+                                BorderBrush="Black"
+                                Foreground="White"
+                                Width="120"
+                                Height="35" Click="infoBtn_Click"/>
+                    </StackPanel>
+                </Grid>
+        </Grid>
+    </Grid>
+</Page>
