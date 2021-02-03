@@ -1,0 +1,28 @@
+D:\Preparation\C-applications\People application\People application\People application\bin\Debug\People application.exe.config
+D:\Preparation\C-applications\People application\People application\People application\bin\Debug\People application.exe
+D:\Preparation\C-applications\People application\People application\People application\bin\Debug\People application.pdb
+D:\Preparation\C-applications\People application\People application\People application\bin\Debug\EntityFramework.dll
+D:\Preparation\C-applications\People application\People application\People application\bin\Debug\EntityFramework.SqlServer.dll
+D:\Preparation\C-applications\People application\People application\People application\bin\Debug\EntityFramework.xml
+D:\Preparation\C-applications\People application\People application\People application\bin\Debug\EntityFramework.SqlServer.xml
+D:\Preparation\C-applications\People application\People application\People application\bin\Debug\ru\EntityFramework.resources.dll
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\View\Pages\Admin\adminMainPage.g.cs
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\View\Pages\Admin\Functions for a data\addPage.g.cs
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\View\Pages\Admin\Functions for a data\editPage.g.cs
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\View\Windows\MainWindow.g.cs
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\App.g.cs
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application_Content.g.cs
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application_MarkupCompile.cache
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application_MarkupCompile.lref
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\View\Pages\Admin\adminMainPage.baml
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\View\Pages\Admin\Functions for a data\addPage.baml
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\View\Pages\Admin\Functions for a data\editPage.baml
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\View\Windows\MainWindow.baml
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application.g.resources
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People_application.Properties.Resources.resources
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application.csproj.GenerateResource.cache
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application.csproj.CoreCompileInputs.cache
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application.csproj.CopyComplete
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application.exe
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application.pdb
+D:\Preparation\C-applications\People application\People application\People application\obj\Debug\People application.csprojAssemblyReference.cache

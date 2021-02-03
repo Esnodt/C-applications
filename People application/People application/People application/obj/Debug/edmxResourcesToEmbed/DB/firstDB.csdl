@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBPeopleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankNameID" Type="Int32" Nullable="false" />
+    <Property Name="Balance" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BankNames" Relationship="Self.FK_Bank_BankNameID_BankNames_ID" FromRole="Bank" ToRole="BankNames" />
+    <NavigationProperty Name="Passport" Relationship="Self.FK_Passport_BankID_Bank_ID" FromRole="Bank" ToRole="Passport" />
+  </EntityType>
+  <EntityType Name="BankNames">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Bank" Relationship="Self.FK_Bank_BankNameID_BankNames_ID" FromRole="BankNames" ToRole="Bank" />
+  </EntityType>
+  <EntityType Name="Human">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HumanImg" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="PassportID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Passport" Relationship="Self.FK_Human_PassportID_Passport_ID" FromRole="Human" ToRole="Passport" />
+  </EntityType>
+  <EntityType Name="Passport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Series" Type="Int32" Nullable="false" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="BankID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bank" Relationship="Self.FK_Passport_BankID_Bank_ID" FromRole="Passport" ToRole="Bank" />
+    <NavigationProperty Name="Human" Relationship="Self.FK_Human_PassportID_Passport_ID" FromRole="Passport" ToRole="Human" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Bank_BankNameID_BankNames_ID">
+    <End Role="BankNames" Type="Self.BankNames" Multiplicity="1" />
+    <End Role="Bank" Type="Self.Bank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankNames">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bank">
+        <PropertyRef Name="BankNameID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Passport_BankID_Bank_ID">
+    <End Role="Bank" Type="Self.Bank" Multiplicity="1" />
+    <End Role="Passport" Type="Self.Passport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bank">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Passport">
+        <PropertyRef Name="BankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Human_PassportID_Passport_ID">
+    <End Role="Passport" Type="Self.Passport" Multiplicity="1" />
+    <End Role="Human" Type="Self.Human" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Passport">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Human">
+        <PropertyRef Name="PassportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBPeopleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bank" EntityType="Self.Bank" />
+    <EntitySet Name="BankNames" EntityType="Self.BankNames" />
+    <EntitySet Name="Human" EntityType="Self.Human" />
+    <EntitySet Name="Passport" EntityType="Self.Passport" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Bank_BankNameID_BankNames_ID" Association="Self.FK_Bank_BankNameID_BankNames_ID">
+      <End Role="BankNames" EntitySet="BankNames" />
+      <End Role="Bank" EntitySet="Bank" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Passport_BankID_Bank_ID" Association="Self.FK_Passport_BankID_Bank_ID">
+      <End Role="Bank" EntitySet="Bank" />
+      <End Role="Passport" EntitySet="Passport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Human_PassportID_Passport_ID" Association="Self.FK_Human_PassportID_Passport_ID">
+      <End Role="Passport" EntitySet="Passport" />
+      <End Role="Human" EntitySet="Human" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

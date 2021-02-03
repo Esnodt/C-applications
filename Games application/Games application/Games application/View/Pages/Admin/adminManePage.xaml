@@ -1,0 +1,101 @@
+﻿<Page x:Class="Games_application.View.Pages.Admin.adminManePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Games_application.View.Pages.Admin"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="adminManePage">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Black"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Width" Value="130"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid>
+            <Image Source="/img/witcheBg.jpg" Stretch="Fill"/>
+        </Grid>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <ListView x:Name="listDataView" MouseDoubleClick="listDataView_MouseDoubleClick" Background="Transparent" BorderBrush="Black">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Grid.Column="0"
+                                      Margin="0,0,40,0">
+                                    <Image Width="200"
+                                           Height="200"
+                                           Source="{Binding GameImg}"/>
+                                </Grid>
+
+                                <Grid Grid.Column="1">
+                                    <StackPanel VerticalAlignment="Center"
+                                                HorizontalAlignment="Left"
+                                                Orientation="Vertical">
+                                        <Label Content="{Binding GameName}" ContentStringFormat="Название: {0}" FontSize="17" Foreground="White"  Margin="0,0,0,15"/>
+                                        <Label Content="{Binding AddParameters.YearOfProd}" ContentStringFormat="Дата выпуска: {0:dd MMMM yyyy}" FontSize="17" Foreground="White" Margin="0,0,0,15"/>
+                                        <Label Content="{Binding Price}" ContentStringFormat="Цена: {0:C}" FontSize="17" Foreground="White" Margin="0,0,0,15"/>
+                                        <Label Content="{Binding AddParameters.Category.Title}" ContentStringFormat="Категория: {0}" FontSize="17" Foreground="White"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button x:Uid="addBtn"
+                            Content="Добавить"                          
+                            Margin="0,0,20,0" Click="Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button x:Name="editBtn"
+                            Content="Изменить"                            
+                            Margin="0,0,20,0" 
+                            Click="editBtn_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button x:Name="deleteBtn"
+                            Content="Удалить"                        
+                            Click="deleteBtn_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

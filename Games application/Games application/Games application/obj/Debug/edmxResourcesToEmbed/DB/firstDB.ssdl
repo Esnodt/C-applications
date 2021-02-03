@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище GamesModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AddParameters">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearOfProd" Type="date" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GameImg" Type="image" Nullable="false" />
+    <Property Name="GameName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="AddParamID" Type="int" Nullable="false" />
+    <Property Name="SpecificID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="IDRole" />
+    </Key>
+    <Property Name="IDRole" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SignIn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="RoleID" Type="nchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Specifications">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CPU" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VideoCard" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="RAM" Type="int" Nullable="false" />
+    <Property Name="OS" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_AddParameters_CaregoryID_Category_ID">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="AddParameters" Type="Self.AddParameters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AddParameters">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_AddParamID_AddParameters_ID">
+    <End Role="AddParameters" Type="Self.AddParameters" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AddParameters">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="AddParamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_SpecificID_Specifications_ID">
+    <End Role="Specifications" Type="Self.Specifications" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specifications">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="SpecificID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignIn_RoleID_Role_IDRole">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="IDRole" />
+      </Principal>
+      <Dependent Role="SignIn">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище GamesModelContainer">
+    <EntitySet Name="AddParameters" EntityType="Self.AddParameters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SignIn" EntityType="Self.SignIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Specifications" EntityType="Self.Specifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AddParameters_CaregoryID_Category_ID" Association="Self.FK_AddParameters_CaregoryID_Category_ID">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="AddParameters" EntitySet="AddParameters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_AddParamID_AddParameters_ID" Association="Self.FK_Game_AddParamID_AddParameters_ID">
+      <End Role="AddParameters" EntitySet="AddParameters" />
+      <End Role="Game" EntitySet="Game" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_SpecificID_Specifications_ID" Association="Self.FK_Game_SpecificID_Specifications_ID">
+      <End Role="Specifications" EntitySet="Specifications" />
+      <End Role="Game" EntitySet="Game" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignIn_RoleID_Role_IDRole" Association="Self.FK_SignIn_RoleID_Role_IDRole">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="SignIn" EntitySet="SignIn" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

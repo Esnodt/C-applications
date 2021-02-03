@@ -1,3 +1,18 @@
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignColors.dll
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.exe
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\Airport application.exe.config
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\Airport application.exe
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\Airport application.pdb
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\EntityFramework.dll
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\EntityFramework.SqlServer.dll
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\EntityFramework.xml
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\EntityFramework.SqlServer.xml
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignColors.pdb
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\ru\EntityFramework.resources.dll
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\VIew\Pages\Admin\adminMainPage.g.cs
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\VIew\Pages\Admin\Functions for a data\addPage.g.cs
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\VIew\Pages\Admin\Functions for a data\editPage.g.cs
@@ -9,20 +24,6 @@ D:\Preparation\C-applications\Airport application\Airport application\Airport ap
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application_Content.g.cs
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application_MarkupCompile.cache
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application_MarkupCompile.lref
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\Airport application.exe.config
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\Airport application.exe
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\Airport application.pdb
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\EntityFramework.dll
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\EntityFramework.SqlServer.dll
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignColors.dll
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignThemes.Wpf.dll
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\EntityFramework.xml
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\EntityFramework.SqlServer.xml
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignColors.pdb
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignThemes.Wpf.pdb
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\MaterialDesignThemes.Wpf.xml
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\ru\EntityFramework.resources.dll
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\App.baml
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\VIew\Pages\Admin\adminMainPage.baml
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\VIew\Pages\Admin\Functions for a data\addPage.baml
@@ -36,5 +37,4 @@ D:\Preparation\C-applications\Airport application\Airport application\Airport ap
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.csproj.GenerateResource.cache
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.csproj.CoreCompileInputs.cache
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.csproj.CopyComplete
-D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.exe
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.pdb

@@ -47,13 +47,13 @@
                 <Grid Grid.Row="1">
                     <DataGrid x:Name="datavIew" AutoGenerateColumns="False" IsReadOnly="True" Background="White" BorderBrush="Black">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="0.2*" Foreground="White"/>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="0.3*" Foreground="White"/>
                             <DataGridTextColumn Header="Номер маршрута" Binding="{Binding RouteNumber}" Width="*"/>
                             <DataGridTextColumn Header="Пункт вылета" Binding="{Binding DepPoint}" Width="*"/>
                             <DataGridTextColumn Header="Пункт прибытия" Binding="{Binding ArrPoint}" Width="*"/>
                             <DataGridTextColumn Header="Дистанция" Binding="{Binding Distance}" Width="*"/>
-                            <DataGridTextColumn Header="Дата и время вылета" Binding="{Binding PlaneParameters.DepDateTime}" Width="*"/>
-                            <DataGridTextColumn Header="Дата и время прибытия" Binding="{Binding PlanePatameters.ArrDateTime}" Width="*"/>
+                            <DataGridTextColumn Header="Дата и время вылета" Binding="{Binding PlaneParameters.DepDateTime, StringFormat={}{00:dd MMMM yyy}}" Width="*"/>
+                            <DataGridTextColumn Header="Дата и время прибытия" Binding="{Binding PlaneParameters.ArrDateTime,  StringFormat={}{00:dd MMMM yyy}}" Width="*"/>
                             <DataGridTextColumn Header="Количество проданных билетов" Binding="{Binding PlaneParameters.Tickets}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>

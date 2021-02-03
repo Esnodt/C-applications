@@ -1,0 +1,73 @@
+﻿<Page x:Class="Games_application.View.Pages.Admin.Functions_for_a_data.infoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Games_application.View.Pages.Admin.Functions_for_a_data"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="infoPage">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Black"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Width" Value="130"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid>
+            <Image Source="/img/witcheBg.jpg" Stretch="Fill"/>
+        </Grid>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <ListView x:Name="infoList" Background="Transparent" BorderBrush="Black">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <StackPanel VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Orientation="Vertical">
+                                    <Label Content="{Binding GameName}" FontSize="30" FontWeight="Bold" Margin="0,0,0,40"/>
+
+                                    <StackPanel Orientation="Vertical">
+                                        <Label Content="{Binding Specifications.CPU}" ContentStringFormat="Процессор: {0}" FontSize="18" Foreground="White" Margin="0,0,0,20"/>
+                                        <Label Content="{Binding Specifications.VideoCard}" ContentStringFormat="Видеокарта: {0}" FontSize="18" Foreground="White" Margin="0,0,0,20"/>
+                                        <Label Content="{Binding Specifications.RAM}" ContentStringFormat="ОЗУ: {0}" FontSize="18" Foreground="White" Margin="0,0,0,20"/>
+                                        <Label Content="{Binding Specifications.OS}" ContentStringFormat="ОС: {0}" FontSize="18" Foreground="White"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="0,0.4,0,0">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button x:Name="backBtn"
+                            Content="Назад"
+                            Click="backBtn_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+    
+</Page>

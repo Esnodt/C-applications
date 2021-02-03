@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище DBPeopleModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BankNameID" Type="int" Nullable="false" />
+          <Property Name="Balance" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BankNames">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Human">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HumanImg" Type="image" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Patronymic" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="PassportID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Passport">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Series" Type="int" Nullable="false" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="BankID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Bank_BankNameID_BankNames_ID">
+          <End Role="BankNames" Type="Self.BankNames" Multiplicity="1" />
+          <End Role="Bank" Type="Self.Bank" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BankNames">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Bank">
+              <PropertyRef Name="BankNameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Human_PassportID_Passport_ID">
+          <End Role="Passport" Type="Self.Passport" Multiplicity="1" />
+          <End Role="Human" Type="Self.Human" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Passport">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Human">
+              <PropertyRef Name="PassportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Passport_BankID_Bank_ID">
+          <End Role="Bank" Type="Self.Bank" Multiplicity="1" />
+          <End Role="Passport" Type="Self.Passport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bank">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Passport">
+              <PropertyRef Name="BankID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище DBPeopleModelContainer">
+          <EntitySet Name="Bank" EntityType="Self.Bank" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BankNames" EntityType="Self.BankNames" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Human" EntityType="Self.Human" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Passport" EntityType="Self.Passport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Bank_BankNameID_BankNames_ID" Association="Self.FK_Bank_BankNameID_BankNames_ID">
+            <End Role="BankNames" EntitySet="BankNames" />
+            <End Role="Bank" EntitySet="Bank" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Human_PassportID_Passport_ID" Association="Self.FK_Human_PassportID_Passport_ID">
+            <End Role="Passport" EntitySet="Passport" />
+            <End Role="Human" EntitySet="Human" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Passport_BankID_Bank_ID" Association="Self.FK_Passport_BankID_Bank_ID">
+            <End Role="Bank" EntitySet="Bank" />
+            <End Role="Passport" EntitySet="Passport" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBPeopleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BankNameID" Type="Int32" Nullable="false" />
+          <Property Name="Balance" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="BankNames" Relationship="Self.FK_Bank_BankNameID_BankNames_ID" FromRole="Bank" ToRole="BankNames" />
+          <NavigationProperty Name="Passport" Relationship="Self.FK_Passport_BankID_Bank_ID" FromRole="Bank" ToRole="Passport" />
+        </EntityType>
+        <EntityType Name="BankNames">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bank" Relationship="Self.FK_Bank_BankNameID_BankNames_ID" FromRole="BankNames" ToRole="Bank" />
+        </EntityType>
+        <EntityType Name="Human">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HumanImg" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="PassportID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Passport" Relationship="Self.FK_Human_PassportID_Passport_ID" FromRole="Human" ToRole="Passport" />
+        </EntityType>
+        <EntityType Name="Passport">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Series" Type="Int32" Nullable="false" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="BankID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bank" Relationship="Self.FK_Passport_BankID_Bank_ID" FromRole="Passport" ToRole="Bank" />
+          <NavigationProperty Name="Human" Relationship="Self.FK_Human_PassportID_Passport_ID" FromRole="Passport" ToRole="Human" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Bank_BankNameID_BankNames_ID">
+          <End Role="BankNames" Type="Self.BankNames" Multiplicity="1" />
+          <End Role="Bank" Type="Self.Bank" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BankNames">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Bank">
+              <PropertyRef Name="BankNameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Passport_BankID_Bank_ID">
+          <End Role="Bank" Type="Self.Bank" Multiplicity="1" />
+          <End Role="Passport" Type="Self.Passport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bank">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Passport">
+              <PropertyRef Name="BankID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Human_PassportID_Passport_ID">
+          <End Role="Passport" Type="Self.Passport" Multiplicity="1" />
+          <End Role="Human" Type="Self.Human" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Passport">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Human">
+              <PropertyRef Name="PassportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBPeopleEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bank" EntityType="Self.Bank" />
+          <EntitySet Name="BankNames" EntityType="Self.BankNames" />
+          <EntitySet Name="Human" EntityType="Self.Human" />
+          <EntitySet Name="Passport" EntityType="Self.Passport" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <AssociationSet Name="FK_Bank_BankNameID_BankNames_ID" Association="Self.FK_Bank_BankNameID_BankNames_ID">
+            <End Role="BankNames" EntitySet="BankNames" />
+            <End Role="Bank" EntitySet="Bank" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Passport_BankID_Bank_ID" Association="Self.FK_Passport_BankID_Bank_ID">
+            <End Role="Bank" EntitySet="Bank" />
+            <End Role="Passport" EntitySet="Passport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Human_PassportID_Passport_ID" Association="Self.FK_Human_PassportID_Passport_ID">
+            <End Role="Passport" EntitySet="Passport" />
+            <End Role="Human" EntitySet="Human" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DBPeopleModelContainer" CdmEntityContainer="DBPeopleEntities">
+          <EntitySetMapping Name="Bank">
+            <EntityTypeMapping TypeName="DBPeopleModel.Bank">
+              <MappingFragment StoreEntitySet="Bank">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BankNameID" ColumnName="BankNameID" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BankNames">
+            <EntityTypeMapping TypeName="DBPeopleModel.BankNames">
+              <MappingFragment StoreEntitySet="BankNames">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Human">
+            <EntityTypeMapping TypeName="DBPeopleModel.Human">
+              <MappingFragment StoreEntitySet="Human">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HumanImg" ColumnName="HumanImg" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="PassportID" ColumnName="PassportID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Passport">
+            <EntityTypeMapping TypeName="DBPeopleModel.Passport">
+              <MappingFragment StoreEntitySet="Passport">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Series" ColumnName="Series" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="BankID" ColumnName="BankID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DBPeopleModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

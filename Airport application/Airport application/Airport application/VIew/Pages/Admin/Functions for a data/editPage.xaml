@@ -44,6 +44,7 @@
                             <TextBox x:Name="routeNumberTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -55,6 +56,7 @@
                             <TextBox x:Name="deepPointTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -66,6 +68,7 @@
                             <TextBox x:Name="arrPointTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -77,6 +80,7 @@
                             <DatePicker x:Name="depDateTimeTxb"
                                      FontSize="16"
                                      Width="250"
+                                       Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -88,6 +92,7 @@
                             <DatePicker x:Name="arrDateTimeTxb"
                                         FontSize="16"
                                         Width="250"
+                                        Foreground="White"
                                         BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -99,6 +104,7 @@
                             <TextBox x:Name="distanceTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                     </StackPanel>
@@ -117,6 +123,7 @@
                             <TextBox x:Name="planeNumberTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -128,6 +135,7 @@
                             <TextBox x:Name="typeTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -139,6 +147,7 @@
                             <TextBox x:Name="numberOfPlaceTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -150,6 +159,7 @@
                             <TextBox x:Name="planeSpeedTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
@@ -161,6 +171,7 @@
                             <TextBox x:Name="passNumberTxb"
                                      FontSize="16"
                                      Width="250"
+                                     Foreground="White"
                                      BorderBrush="White"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
@@ -171,6 +182,7 @@
                             <TextBox    x:Name="ticketsTxb"
                                         FontSize="16"
                                          Width="250"
+                                        Foreground="White"
                                          BorderBrush="White"/>
                         </StackPanel>
                     </StackPanel>

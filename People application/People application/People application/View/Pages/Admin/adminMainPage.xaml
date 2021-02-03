@@ -1,0 +1,86 @@
+﻿<Page x:Class="People_application.View.Pages.Admin.adminMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:People_application.View.Pages.Admin"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="adminMainPage">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <ListView x:Name="listDataView"
+                      MouseDoubleClick="listDataView_MouseDoubleClick">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0"
+                                  Margin="0,0,20,0">
+                                <Image Width="200"
+                                       Height="200"
+                                       Source="{Binding HumanImg}"/>
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Grid.Column="0"
+                                      Margin="0,0,100,0">
+                                    <StackPanel VerticalAlignment="Center"
+                                                Orientation="Vertical">
+                                        <Label Content="{Binding Surname}" ContentStringFormat="Фамилия: {0}" FontSize="16" Margin="0,0,0,10"/>
+                                        <Label Content="{Binding Name}" ContentStringFormat="Имя: {0}" FontSize="16" Margin="0,0,0,10"/>
+                                        <Label Content="{Binding Patronymic}" ContentStringFormat="Отчество: {0}" FontSize="16" Margin="0,0,0,10"/>
+                                        <Label Content="{Binding Age}" ContentStringFormat="Возраст: {0}" FontSize="16" Margin="0,0,0,10"/>
+                                    </StackPanel>
+                                </Grid>
+
+                                <Grid Grid.Column="1">
+                                    <StackPanel VerticalAlignment="Center"
+                                                Orientation="Vertical">
+                                        <Label Content="{Binding Passport.Series}" ContentStringFormat="Серия паспорта: {0}" FontSize="16" Margin="0,0,0,10"/>
+                                        <Label Content="{Binding Passport.Number}" ContentStringFormat="Номер паспорта: {0}" FontSize="16" Margin="0,0,0,10"/>
+                                        <Label Content="{Binding Passport.Bank.BankNames.Name}" ContentStringFormat="Банк: {0}" FontSize="16" Margin="0,0,0,10"/>
+                                        <Label Content="{Binding Passport.Bank.Balance}" ContentStringFormat="Баланс: {0}" FontSize="16" Margin="0,0,0,10"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <Button x:Name="addBtn"
+                        Content="Добавить"
+                        Width="120"
+                        Height="35"
+                        Margin="0,0,20,0" Click="addBtn_Click"/>
+                <Button x:Name="removeBtn"
+                        Content="Удалить"
+                        Width="120"
+                        Height="35"
+                        Margin="0,0,20,0" Click="removeBtn_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

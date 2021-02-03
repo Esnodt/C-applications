@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GamesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AddParameters">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearOfProd" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_AddParameters_CaregoryID_Category_ID" FromRole="AddParameters" ToRole="Category" />
+    <NavigationProperty Name="Game" Relationship="Self.FK_Game_AddParamID_AddParameters_ID" FromRole="AddParameters" ToRole="Game" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AddParameters" Relationship="Self.FK_AddParameters_CaregoryID_Category_ID" FromRole="Category" ToRole="AddParameters" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GameImg" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="GameName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="AddParamID" Type="Int32" Nullable="false" />
+    <Property Name="SpecificID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AddParameters" Relationship="Self.FK_Game_AddParamID_AddParameters_ID" FromRole="Game" ToRole="AddParameters" />
+    <NavigationProperty Name="Specifications" Relationship="Self.FK_Game_SpecificID_Specifications_ID" FromRole="Game" ToRole="Specifications" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="IDRole" />
+    </Key>
+    <Property Name="IDRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SignIn" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="Role" ToRole="SignIn" />
+  </EntityType>
+  <EntityType Name="SignIn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="SignIn" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Specifications">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CPU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VideoCard" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RAM" Type="Int32" Nullable="false" />
+    <Property Name="OS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Game" Relationship="Self.FK_Game_SpecificID_Specifications_ID" FromRole="Specifications" ToRole="Game" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_AddParameters_CaregoryID_Category_ID">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="AddParameters" Type="Self.AddParameters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AddParameters">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_AddParamID_AddParameters_ID">
+    <End Role="AddParameters" Type="Self.AddParameters" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AddParameters">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="AddParamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Game_SpecificID_Specifications_ID">
+    <End Role="Specifications" Type="Self.Specifications" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specifications">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="SpecificID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignIn_RoleID_Role_IDRole">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="IDRole" />
+      </Principal>
+      <Dependent Role="SignIn">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GamesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AddParameters" EntityType="Self.AddParameters" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Game" EntityType="Self.Game" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="SignIn" EntityType="Self.SignIn" />
+    <EntitySet Name="Specifications" EntityType="Self.Specifications" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_AddParameters_CaregoryID_Category_ID" Association="Self.FK_AddParameters_CaregoryID_Category_ID">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="AddParameters" EntitySet="AddParameters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_AddParamID_AddParameters_ID" Association="Self.FK_Game_AddParamID_AddParameters_ID">
+      <End Role="AddParameters" EntitySet="AddParameters" />
+      <End Role="Game" EntitySet="Game" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Game_SpecificID_Specifications_ID" Association="Self.FK_Game_SpecificID_Specifications_ID">
+      <End Role="Specifications" EntitySet="Specifications" />
+      <End Role="Game" EntitySet="Game" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignIn_RoleID_Role_IDRole" Association="Self.FK_SignIn_RoleID_Role_IDRole">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="SignIn" EntitySet="SignIn" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

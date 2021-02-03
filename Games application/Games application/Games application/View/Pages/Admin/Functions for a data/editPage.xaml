@@ -1,0 +1,181 @@
+﻿<Page x:Class="Games_application.View.Pages.Admin.Functions_for_a_data.editPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Games_application.View.Pages.Admin.Functions_for_a_data"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="editPage">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Black"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Width" Value="130"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="25"></Setter>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid>
+            <Image Source="/img/witcheBg.jpg" Stretch="Fill"/>
+        </Grid>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <StackPanel VerticalAlignment="Center"
+                                Orientation="Vertical"
+                                HorizontalAlignment="Center">
+                        <Image x:Name="imgLoad"
+                               Width="300"
+                               Height="300"
+                               Margin="0,0,0,20"/>
+                        <Button x:Name="openImgBtn"
+                                Content="Открыть"
+                                Click="openImgBtn_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Название:"
+                                       FontSize="15"
+                                       Width="100"/>
+                            <TextBox x:Name="gameNameTxb"
+                                     FontSize="14"
+                                     Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Год выпуска:"
+                                       FontSize="15"
+                                       Width="100"/>
+                            <DatePicker x:Name="yearOfProdTxb"
+                                        FontSize="14"
+                                        Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Цена:"
+                                       FontSize="15"
+                                       Width="100"/>
+                            <TextBox x:Name="priceTxb"
+                                     FontSize="14"
+                                     Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Категория:"
+                                       FontSize="15"
+                                       Width="100"/>
+                            <ComboBox x:Name="categoryTxb"
+                                      FontSize="14"
+                                      Width="200"/>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,0,0,30">
+                            <TextBlock Text="Необходимые характеристики на ПК:"
+                                       FontSize="18"
+                                       FontWeight="Bold"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Процессор:"
+                                       FontSize="15"
+                                       Width="100"/>
+                            <TextBox x:Name="cpuTxb"
+                                     FontSize="14"
+                                     Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Видеокарта:"
+                                       FontSize="14"
+                                       Width="100"/>
+                            <TextBox x:Name="videoTxb"
+                                     FontSize="14"
+                                     Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="ОЗУ:"
+                                       FontSize="14"
+                                       Width="100"/>
+                            <TextBox x:Name="ramTxb"
+                                     FontSize="14"
+                                     Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="ОС:"
+                                       FontSize="15"
+                                       Width="100"/>
+                            <TextBox x:Name="osTxb"
+                                     FontSize="14"
+                                     Width="200"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button x:Name="backBtn"
+                            Content="Назад"
+                            Margin="0,0,20,0" Click="backBtn_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button x:Name="edirtBtn"
+                            Content="Изменить"
+                            Click="edirtBtn_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+    
+</Page>

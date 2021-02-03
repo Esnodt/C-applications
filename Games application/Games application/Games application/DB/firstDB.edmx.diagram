@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9900a3d333e548aebef59939291e6bba" Name="Diagram1">
+        <EntityTypeShape EntityType="GamesModel.AddParameters" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesModel.Game" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesModel.Role" Width="1.5" PointX="5.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesModel.SignIn" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesModel.Specifications" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GamesModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="GamesModel.FK_AddParameters_CaregoryID_Category_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesModel.FK_Game_AddParamID_AddParameters_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesModel.FK_Game_SpecificID_Specifications_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="GamesModel.FK_SignIn_RoleID_Role_IDRole" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
