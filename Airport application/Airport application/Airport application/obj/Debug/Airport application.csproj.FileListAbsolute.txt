@@ -38,3 +38,4 @@ D:\Preparation\C-applications\Airport application\Airport application\Airport ap
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.csproj.CoreCompileInputs.cache
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.csproj.CopyComplete
 D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.pdb
+D:\Preparation\C-applications\Airport application\Airport application\Airport application\obj\Debug\Airport application.csprojAssemblyReference.cache

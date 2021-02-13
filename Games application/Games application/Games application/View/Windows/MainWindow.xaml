@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Games_application"
-        mc:Ignorable="d" Loaded="Window_Loaded"
-        Title="MainWindow" Height="600" Width="900">
+        mc:Ignorable="d" Loaded="Window_Loaded" WindowStyle="ToolWindow"
+        Title="MainWindow" Height="700" Width="900">
     <Grid>
         <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>

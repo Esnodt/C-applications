@@ -1,0 +1,111 @@
+﻿<Page x:Class="Show_application.View.Pages.addPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Show_application.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="addPage">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="35"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Width" Value="170"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Padding" Value="4"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Orientation="Vertical">
+                        <Image x:Name="imgLoad"
+                               Width="250"
+                               Height="250"
+                               Margin="0,0,0,20"/>
+                        <Button x:Name="imgBtn"
+                                Content="Открыть" Click="imgBtn_Click"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Мастерская:"/>
+                            <TextBox x:Name="roomNameTxb"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Количество ПК:"/>
+                            <TextBox x:Name="pkNumberTxb"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Материнская плата:"/>
+                            <TextBox x:Name="motherBoardTxb"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Процессор:"/>
+                            <TextBox x:Name="CPUTxb"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="Видеокарта:"/>
+                            <TextBox x:Name="videoCardTxb"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <TextBlock Text="ОЗУ:"/>
+                            <TextBox x:Name="RAMTxb"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Блок питания:"/>
+                            <TextBox x:Name="powerSupplyTxb"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <Button x:Name="backBtn"
+                        Content="Назад"
+                        Margin="0,0,20,0" Click="backBtn_Click"/>
+                <Button x:Name="addBtn"
+                        Content="Добавить" Click="addBtn_Click"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Page>

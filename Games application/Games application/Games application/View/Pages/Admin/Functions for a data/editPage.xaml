@@ -17,7 +17,8 @@
             <Setter Property="Height" Value="40"></Setter>
         </Style>
         <Style TargetType="TextBox">
-            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="Padding" Value="4"></Setter>
         </Style>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="White"></Setter>
@@ -100,6 +101,8 @@
                                        Width="100"/>
                             <ComboBox x:Name="categoryTxb"
                                       FontSize="14"
+                                      Height="30"
+                                      
                                       Width="200"/>
                         </StackPanel>
 

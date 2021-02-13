@@ -97,3 +97,4 @@ namespace Games_application.View.Pages.Admin.Functions_for_a_data
         }
     }
 }
+    

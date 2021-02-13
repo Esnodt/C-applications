@@ -1,0 +1,10 @@
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\bin\Debug\Test.exe.config
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\bin\Debug\Test.exe
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\bin\Debug\Test.pdb
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\bin\Debug\DLL lesson.dll
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\bin\Debug\DLL lesson.pdb
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\obj\Debug\Test.csprojAssemblyReference.cache
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\obj\Debug\Test.csproj.CopyComplete
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\obj\Debug\Test.exe
+D:\Preparation\C-applications\DLL lesson\DLL lesson\Test\obj\Debug\Test.pdb

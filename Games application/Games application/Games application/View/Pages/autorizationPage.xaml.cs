@@ -62,14 +62,28 @@ namespace Games_application.View.Pages
             }
         }
 
+        private void comeBtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            comeBtn.Background = Brushes.Gray;
+            comeBtn.BorderBrush = Brushes.Gray;
+        }
+
+        private void comeBtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            comeBtn.Background = Brushes.Black;
+            comeBtn.BorderBrush = Brushes.Black;
+        }
+
         private void exitBtn_MouseEnter(object sender, MouseEventArgs e)
         {
             exitBtn.Background = Brushes.Gray;
+            exitBtn.BorderBrush = Brushes.Gray;
         }
 
         private void exitBtn_MouseLeave(object sender, MouseEventArgs e)
         {
             exitBtn.Background = Brushes.Black;
+            exitBtn.BorderBrush = Brushes.Black;
         }
     }
 }

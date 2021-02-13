@@ -102,5 +102,22 @@ namespace Games_application.View.Pages.Admin
                MessageBox.Show(ex.Message, ex.Source, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void pdfBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if(printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(listDataView, "invoice");
+                }
+            }
+            finally
+            {
+                this.IsEnabled = true;
+            }
+        }
     }
 }

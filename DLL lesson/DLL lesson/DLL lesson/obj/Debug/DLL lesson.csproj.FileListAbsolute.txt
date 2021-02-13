@@ -1,0 +1,6 @@
+D:\Preparation\C-applications\DLL lesson\DLL lesson\DLL lesson\bin\Debug\DLL lesson.dll
+D:\Preparation\C-applications\DLL lesson\DLL lesson\DLL lesson\bin\Debug\DLL lesson.pdb
+D:\Preparation\C-applications\DLL lesson\DLL lesson\DLL lesson\obj\Debug\DLL lesson.csprojAssemblyReference.cache
+D:\Preparation\C-applications\DLL lesson\DLL lesson\DLL lesson\obj\Debug\DLL lesson.csproj.CoreCompileInputs.cache
+D:\Preparation\C-applications\DLL lesson\DLL lesson\DLL lesson\obj\Debug\DLL lesson.dll
+D:\Preparation\C-applications\DLL lesson\DLL lesson\DLL lesson\obj\Debug\DLL lesson.pdb

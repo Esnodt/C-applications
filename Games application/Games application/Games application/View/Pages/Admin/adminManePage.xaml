@@ -86,8 +86,18 @@
                         </Button.Resources>
                     </Button>
                     <Button x:Name="deleteBtn"
-                            Content="Удалить"                        
+                            Content="Удалить"
+                            Margin="0,0,20,0"
                             Click="deleteBtn_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button x:Name="pdfBtn"
+                            Content="PDF"
+                            Click="pdfBtn_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>

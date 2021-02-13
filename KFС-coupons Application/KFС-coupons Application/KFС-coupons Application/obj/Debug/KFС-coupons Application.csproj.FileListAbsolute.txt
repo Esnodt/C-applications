@@ -1,0 +1,17 @@
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\bin\Debug\KFС-coupons Application.exe.config
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\bin\Debug\KFС-coupons Application.exe
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\bin\Debug\KFС-coupons Application.pdb
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС-coupons Application.csprojAssemblyReference.cache
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\View\Pages\MainPage.g.cs
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\View\Windows\MainWindow.g.cs
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\App.g.cs
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС-coupons Application_MarkupCompile.cache
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС-coupons Application_MarkupCompile.lref
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\View\Pages\MainPage.baml
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\View\Windows\MainWindow.baml
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС-coupons Application.g.resources
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС_coupons_Application.Properties.Resources.resources
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС-coupons Application.csproj.GenerateResource.cache
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС-coupons Application.csproj.CoreCompileInputs.cache
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС-coupons Application.exe
+D:\Preparation\C-applications\KFС-coupons Application\KFС-coupons Application\KFС-coupons Application\obj\Debug\KFС-coupons Application.pdb

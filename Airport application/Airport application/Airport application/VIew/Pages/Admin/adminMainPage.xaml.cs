@@ -66,8 +66,10 @@ namespace Airport_application.VIew.Pages.Admin
             datavIew.ItemsSource = connectClass.db.Route.Where(item => item.DepPoint.Contains(searchTxb.Text) || item.ArrPoint.Contains(searchTxb.Text)).ToList();
         }
 
+        //Btn for reading additional data
         private void infoBtn_Click(object sender, RoutedEventArgs e)
         {
+
             try
             {
                 Route infoRoute = (Route)datavIew.SelectedItem;
@@ -86,6 +88,7 @@ namespace Airport_application.VIew.Pages.Admin
             }
         }
 
+        //Btn for deleting data
         private void deleteBtn_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -114,6 +117,24 @@ namespace Airport_application.VIew.Pages.Admin
         private void addBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new addPage());
+        }
+
+        //Export to PDF
+        private void pdfBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.IsEnabled = false;
+                PrintDialog printDialog = new PrintDialog();
+                if(printDialog.ShowDialog() == true)
+                {
+                    printDialog.PrintVisual(datavIew, "invoice");
+                }
+            }
+            finally
+            {
+                this.IsEnabled = true;
+            }
         }
     }
 }

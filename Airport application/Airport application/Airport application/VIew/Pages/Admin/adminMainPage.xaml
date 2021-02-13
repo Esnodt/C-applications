@@ -93,8 +93,16 @@
                                 BorderBrush="Black"
                                 Foreground="White"
                                 Width="120"
-                                Height="35" Click="infoBtn_Click"/>
-                    </StackPanel>
+                                Height="35" 
+                                Margin="0,0,20,0" Click="infoBtn_Click"/>
+                    <Button x:Name="pdfBtn"
+                                Content="PDF"
+                                 Background="Black"
+                                BorderBrush="Black"
+                                Foreground="White"
+                                Width="120"
+                                Height="35" Click="pdfBtn_Click"/>
+                </StackPanel>
                 </Grid>
         </Grid>
     </Grid>
